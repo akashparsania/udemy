@@ -13,10 +13,45 @@
     <link rel="stylesheet" href="ccs-reset.css"> <!--css reset should be always first if used-->
 
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bitter:wght@700&family=Playfair+Display:wght@600&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <!-- logo script -->
+    <!-- <script src="https://kit.fontawesome.com/6d1be5abea.js" crossorigin="anonymous"></script> -->
+
+
+
     <!-- This is my own style sheet -->
     <link rel="stylesheet" href="style.css">    
 </head>
 <body>
+
+    <div class="popup">
+        <div class="popup_content">
+            <div class="block1">
+               
+               <img src="close.svg" id="close" class="close"  alt="close icon">
+               
+            </div>
+
+            <!-- form name, email,phone-no -->
+            <div class="block2">
+                <input type="text" placeholder="First Name">
+                
+                <input type="text" placeholder="Last Name">
+                
+                <input type="email" placeholder="Email id">
+
+                
+                <input type="tel" placeholder="Phone no">
+
+            </div>
+            <!-- form end -->
+            <div class="block3">
+                <a href="#" id="Submit" class="Book_Online">Submit</a>    
+            </div>
+        
+        </div>
+     </div>
+
+
  <div class="container">
      <header>
     <div class="header_logo"><img src="logo-roar-bikes.svg" alt="company logo"></div>
@@ -31,9 +66,16 @@
             <h1>Mobile bike repairs.</h1>
 
             <p> Many people have difficulty getting their bikes to a bike shop. We call to your office or home anywhere in greater Dublin.</p> 
-            <p>Fast, convenient bike servicing with up-front pricing. All without the hassle of taking your bike into a shop.</p> 
-            <a href="Button Test.html" class="Book_Online">Book Online</a>
+            <p>Fast, convenient bike servicing with up-front pricing. All without the hassle of taking your bike into a shop.</p>
+             <!--Button Class  -->
+            <a href="#" id="Button" class="Book_Online"> 
+                Book Online</a>
          </div>
+
+         <!-- POP UP FORM Class -->
+         
+
+
          <div class="mainbox2">
              <!-- added bike repair image -->
            <img src="image-bike-repair-service.jpg" alt="bike repair picture">
@@ -69,7 +111,19 @@
      </div>
 
      
-     
+     <script>
+
+        document.getElementById("Button").addEventListener("click",function(){document.querySelector(".popup").style.display="flex";
+        })
+
+        document.querySelector(".close")
+        .addEventListener("click",function(){
+            document.querySelector(".popup").style.display="none";
+
+        })
+
+
+     </script>
 
 </body>
 </html>
